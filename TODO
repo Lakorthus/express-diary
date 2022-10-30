@@ -34,6 +34,16 @@
 ✅TODO: Body parser middleware
  - Documentation at npm body-parser google
 TODO: MongoDB and Mongoose Atlas
+ - Sign up for acc
+ - Create data base
+ - Database access
+ - Network access
+ - Add your current IP address
+ - Create a new user
+ - Connect your application
+ - Copy the connection string
+ - Paste the connection string in the .env file
+ - Install mongoose
 TODO: Creating the Schema
 TODO: Reading the diary from the database
 TODO: Adding a diary entry to the database
