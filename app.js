@@ -28,6 +28,11 @@ app.get("/about", (req, res) => {
 app.get("/diary", (req, res) => {
     res.render("diary");
 });
+
+// Route for adding records to diary
+app.get("/add", (req, res) => {
+    res.render("add");
+});
 // Create server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
