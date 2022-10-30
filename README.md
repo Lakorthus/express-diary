@@ -16,8 +16,9 @@ Aim to be a simple and easy to use diary application. It is not intended to be a
 * Run `npm install`
 * Build a file .env with the following content:
 
-```PORT={a port number}
-   DATA_STORAGE_KEY={a secret key}
+```
+    PORT={a port number}
+    DATA_STORAGE_KEY={a secret key}
 ```
 
 ### Requirements
