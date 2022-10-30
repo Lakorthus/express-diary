@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 // Route for /about
 app.get("/about", (req, res) => {
-    res.send("<h1>About Express Diary</h1>");
+    res.render("about");
 });
 
 // Create server

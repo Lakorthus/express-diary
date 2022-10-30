@@ -6,10 +6,27 @@
 ✅TODO: Create a app.js file where the server is going to be
 ✅TODO: Routing with express on app.js
 ✅TODO: Install [EJS](https://ejs.co/) as a view engine on app.js
-    EjS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+
+ - EjS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+ - It's fast, simple, and works on server or client.
+ 
 ✅TODO: Create a views folder with a home.ejs file
 ✅TODO: Create a set engine on app.js
-✅TODO: Create the Home page and About page
+✅TODO: Create Template engine for Home page and About page
+
+ - <%= %> is used to print the value of a variable => res.render("home",{value: "Express Diary"});
+ - <%- %> is used to print the unescaped value of a variable
+ - <% %> is used to execute a JavaScript statement
+ - <%_ %> is used to execute a JavaScript statement without a trailing newline
+ - <%% %> is used to output a literal '<%'
+ - <%# %> is used to output a comment
+ - <%#- %> is used to output a comment without a trailing newline
+ - <%#_ %> is used to output a comment without leading whitespace
+ - <%#=- %> is used to output a comment without leading whitespace or a trailing newline
+ - <%#_-%> is used to output a comment without leading or trailing whitespace
+ - <%#=-%> is used to output a comment without a trailing newline
+ - <%#_=-%> is used to output a comment without leading or trailing whitespace or a trailing newline
+ - <%#-=-%> is used to output a comment without leading or trailing whitespace or a trailing newline
 
 TODO: Serving static files
 TODO: Create the Diary page

@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Diary</title>
-</head>
-<body>
-    <div class="showcase">
-        <h1>Welcome to Express <span class="showcase-span">Diary</span></h1>
-        <p>Record your Daily Life. Express Diary is a simple diary app built with Express and MongoDB</p>
-        <a href="/diary" class="btn">View Diary</a>
-    </div>
-</body>
-</html>
+<%- include('./layout/header')%>
+
+<div class="showcase">
+  <h1>Welcome to <span class="showcase-span">Express Diary</span></h1>
+  <p>
+    Record your Daily Life. Express Diary is a simple diary app built with
+    Express and MongoDB
+  </p>
+  <a href="/about" class="btn">View Diary</a>
+</div>
+
+<%- include('./layout/footer')%>
