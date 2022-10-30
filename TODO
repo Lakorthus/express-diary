@@ -28,8 +28,8 @@
  - <%#_=-%> is used to output a comment without leading or trailing whitespace or a trailing newline
  - <%#-=-%> is used to output a comment without leading or trailing whitespace or a trailing newline
 
-TODO: Serving static files
-TODO: Create the Diary page
+✅TODO: Serving static files
+✅TODO: Create the Diary page
 TODO: Body parser middleware
 TODO: MongoDB and Mongoose Atlas
 TODO: Creating the Schema

@@ -9,6 +9,9 @@ app.use(morgan("dev"));
 // Set templanting engine to ejs
 app.set("view engine", "ejs");
 
+// Set static folder
+app.use(express.static("public"));
+
 // Routing
 
 // Route for /
@@ -21,6 +24,10 @@ app.get("/about", (req, res) => {
     res.render("about");
 });
 
+// Route for /diary
+app.get("/diary", (req, res) => {
+    res.render("diary");
+});
 // Create server
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
