@@ -5,11 +5,16 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(morgan("dev"));
+
+// Set templanting engine to ejs
+app.set("view engine", "ejs");
+
 // Routing
 
 // Route for /
 app.get("/", (req, res) => {
-    res.send("<h1>Express Diary</h1>");
+    // res.render("home",{value: "Express Diary"});
+    res.render("home");
 });
 // Route for /about
 app.get("/about", (req, res) => {
