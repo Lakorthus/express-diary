@@ -4,7 +4,7 @@
 ✅TODO: Npm init
 ✅TODO: Npm download dependencies (express, dotenv, nodemon, morgan, EJS)
 ✅TODO: Create a app.js file where the server is going to be
-TODO: Routing with express
+✅TODO: Routing with express on app.js
 
 
 TODO: Create the Home page and About page
