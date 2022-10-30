@@ -8,7 +8,7 @@
 ✅TODO: Install [EJS](https://ejs.co/) as a view engine on app.js
 
  - EjS is a simple templating language that lets you generate HTML markup with plain JavaScript.
- - It's fast, simple, and works on server or client.
+ - It's fast, simple, and works on server or client
  
 ✅TODO: Create a views folder with a home.ejs file
 ✅TODO: Create a set engine on app.js
@@ -30,7 +30,9 @@
 
 ✅TODO: Serving static files
 ✅TODO: Create the Diary page
-TODO: Body parser middleware
+✅TODO: Securing inputs on the list
+✅TODO: Body parser middleware
+ - Documentation at npm body-parser google
 TODO: MongoDB and Mongoose Atlas
 TODO: Creating the Schema
 TODO: Reading the diary from the database
