@@ -33,7 +33,7 @@
 ✅TODO: Securing inputs on the list
 ✅TODO: Body parser middleware
  - Documentation at npm body-parser google
-TODO: MongoDB and Mongoose Atlas
+✅TODO: MongoDB and Mongoose Atlas
  - Sign up for acc
  - Create data base
  - Database access

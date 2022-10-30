@@ -25,6 +25,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+// Import diary Model
+const Diary = require("./models/diary");
+
 // ROUTING
 // Route for /
 app.get("/", (req, res) => {
@@ -46,7 +49,7 @@ app.get("/add", (req, res) => {
 
 // Route for Saving records to diary
 app.post("/add-to-diary", (req, res) => {
-  res.send(req.body);
+  res.send(req.body.title);
 });
 
 // Create server
