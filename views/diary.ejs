@@ -1,12 +1,20 @@
-<%- include('./layout/header')%> 
-<%- include('./layout/navbar')%>
+<%- include('./layout/header')%> <%- include('./layout/navbar')%>
 
-    <div class="add-container">
-        <div class="add">
-            <p>Add to Diary</p>
-            <a href="/add">ADD</a>
-
-        </div>
+<div class="add-container">
+  <div class="add">
+    <p>Add to Diary</p>
+    <a href="/add">ADD</a>
+  </div>
+  <div class="diary">
+    <% data.forEach((diary)=>{%>
+    <div class="diary-container">
+      <h3><%= diary.title %></h3>
+      <p><%= diary.description %></p>
+      <p><%= diary.date %></p>
+      <a href="">More</a>
     </div>
+    <%}) %>
+  </div>
+</div>
 
 <%- include('./layout/footer')%>
