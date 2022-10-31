@@ -55,7 +55,19 @@
  - [https://stackoverflow.com/questions/28459418/use-of-put-vs-patch-methods-in-rest-api-real-life-scenarios]
  - https://www.npmjs.com/package/method-override
  - https://www.npmjs.com/package/express-method-override
-TODO: Deleting the diary from the database
+✅TODO: Deleting the diary from the database
+
+FIXME: Date format with moongose
+FIXME: Design the diary page with bootstrap or tailwind
+FIXME: CJS modules to ESM modules
+FIXME: About page needs to contain information about the project
+FIXME: Add a favicon
+
+TODO: Deploy the project to Heroku, Netlify or Vercel
+TODO: Add footer to the project
+TODO: Twitter share button on the diary page
+TODO: Implement jest for testing
+
 
 
 
