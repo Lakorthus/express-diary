@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 const url = process.env.MONGODB_URI || "mongodb://localhost:27017/your-db-name";
@@ -13,8 +12,7 @@ mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
-// Import diary Model
-const Diary = require("./models/Diary");
+
 // Morgan
 app.use(morgan("dev"));
 // Set templanting engine to ejs
@@ -26,9 +24,8 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-
-
-
+// Import diary Model
+const Diary = require("./models/Diary");
 // ROUTING
 // Route for /
 app.get("/", (req, res) => {
@@ -41,12 +38,13 @@ app.get("/about", (req, res) => {
 });
 // Route for /diary
 app.get("/diary", (req, res) => {
-  Diary.find().then((data) => {
-    res.render("diary", { data: data });
-  }).catch((err) => {
-    console.log(err);
-  });
-  
+  Diary.find()
+    .then((data) => {
+      res.render("diary", { data: data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 // Route for adding records to diary
 app.get("/add", (req, res) => {
@@ -61,12 +59,21 @@ app.post("/add-to-diary", (req, res) => {
     description: req.body.description,
     date: req.body.date,
   });
-  Data
-    .save()
+  Data.save()
     .then(() => {
       res.redirect("/diary");
     })
     .catch((err) => console.log(err));
+});
+// Route fo /diary/:id for displaying single page using findOne
+app.get("/diary/:id", (req, res) => {
+  Diary.findOne({ _id: req.params.id })
+    .then((data) => {
+      res.render("page", { data: data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 // Create server
