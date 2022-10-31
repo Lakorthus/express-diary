@@ -4,7 +4,9 @@
 <div class="add-to-diary">
     <h1>EDIT <span class="showcase-span">Diary</span></h1>
   
-    <form action="/diary/edit/<%= data.id %>" method="post">
+    <form action="/diary/edit/<%= data.id %>?_method=PATCH" method="post">
+        <input type="hidden" name="_method" value="PATCH">
+
       <div class="form-group">
         <label for="title">Title</label>
         <input

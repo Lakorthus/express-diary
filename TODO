@@ -49,7 +49,12 @@
 ✅TODO: Adding a diary entry to the database
  - Remember ejs syntax for rendering the form
 ✅TODO: Reading the diary from the database
-TODO: Updating the diary from the database
+✅TODO: Updating the diary from the database
+ - On the form only method required is POST and GET
+ - To override this and be able to use PUt/PATCH and DELETE we need to use a package called method-override 
+ - [https://stackoverflow.com/questions/28459418/use-of-put-vs-patch-methods-in-rest-api-real-life-scenarios]
+ - https://www.npmjs.com/package/method-override
+ - https://www.npmjs.com/package/express-method-override
 TODO: Deleting the diary from the database
 
 

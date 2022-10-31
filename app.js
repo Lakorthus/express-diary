@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const methodOverride = require('method-override')
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
@@ -24,6 +25,8 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+// Method override middleware
+app.use(methodOverride('_method'))  // override with POST having ?_method=DELETE/PATCH/PUT
 // Import diary Model
 const Diary = require("./models/Diary");
 // ROUTING
@@ -80,6 +83,26 @@ app.get("/diary/edit/:id", (req, res) => {
   Diary.findOne({ _id: req.params.id })
     .then((data) => {
       res.render("edit", { data: data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+// Edit Data
+app.patch("/diary/edit/:id", (req, res) => {
+  Diary.findOne({ _id: req.params.id })
+    .then((data) => {
+      data.title = req.body.title;
+      data.description = req.body.description;
+      data.date = req.body.date;
+      data
+        .save()
+        .then(() => {
+          res.redirect("/diary");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     })
     .catch((err) => {
       console.log(err);
