@@ -108,6 +108,23 @@ app.patch("/diary/edit/:id", (req, res) => {
       console.log(err);
     });
 });
+// Delete Data
+app.delete("/diary/delete/:id", (req, res) => {
+  Diary.findOne({ _id: req.params.id })
+    .then((data) => {
+      data
+        .remove()
+        .then(() => {
+          res.redirect("/diary");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 // Create server
 app.listen(PORT, () => {

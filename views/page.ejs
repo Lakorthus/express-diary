@@ -8,6 +8,11 @@
 
     <div class="settings">
          <a class="edit" href="/diary/edit/<%= data._id%>">Edit</a>
+
+         <form action="/diary/delete/<%= data._id%>?_method=DELETE" method="post">
+             <input type="hidden" name="_method" value="DELETE">
+             <input type="submit" value="Delete" class="delete">
+         </form>
     </div>
  </div>
 
