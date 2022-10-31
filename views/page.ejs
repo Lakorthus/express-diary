@@ -5,6 +5,10 @@
     <h1><%= data.title%></h1>
     <p><%= data.date%></p>
     <p class="diary-text"><%= data.description%></p>
+
+    <div class="settings">
+         <a class="edit" href="/diary/edit/<%= data._id%>">Edit</a>
+    </div>
  </div>
 
 <%- include('./layout/footer')%>

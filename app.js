@@ -75,6 +75,16 @@ app.get("/diary/:id", (req, res) => {
       console.log(err);
     });
 });
+// Route for /diary/edit/:id for editing single page using findOne
+app.get("/diary/edit/:id", (req, res) => {
+  Diary.findOne({ _id: req.params.id })
+    .then((data) => {
+      res.render("edit", { data: data });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 // Create server
 app.listen(PORT, () => {
