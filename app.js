@@ -1,8 +1,9 @@
-const express = require("express");
-const morgan = require("morgan");
-const methodOverride = require('method-override')
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+import express from "express";
+import morgan from "morgan";
+import methodOverride from "method-override";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import Diary from "./models/diary.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,9 +27,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 // Method override middleware
-app.use(methodOverride('_method'))  // override with POST having ?_method=DELETE/PATCH/PUT
+app.use(methodOverride("_method")); // override with POST having ?_method=DELETE/PATCH/PUT
 // Import diary Model
-const Diary = require("./models/Diary");
 // ROUTING
 // Route for /
 app.get("/", (req, res) => {

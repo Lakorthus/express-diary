@@ -1,9 +1,9 @@
-const mongoose = require("mongoose");
+import { mongoose } from "mongoose";
 
 const diarySchema = new mongoose.Schema({
-  title: {type:String, required:true},
-  description: {type:String, required:true},
-  date: {type:Date, required:true},
+  title: { type: String, required: true },
+  description: { type: String, required: true },
+  date: { type: Date, required: true },
 });
 
-module.exports = mongoose.model("Diary", diarySchema);
+export default mongoose.model("Diary", diarySchema);
