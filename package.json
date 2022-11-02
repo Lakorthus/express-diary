@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Small app for track your day",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "node -r dotenv/config app.js",
     "dev": "nodemon -r dotenv/config app.js"
